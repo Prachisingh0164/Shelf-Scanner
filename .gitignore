@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# ML Models (large files - use Git LFS or download script)
+ml/book_detector/weights/*.pt
+ml/datasets/*.csv
+ml/datasets/*.json
+ml/recommender/models/*.pkl
+
+# Node
+node_modules/
+.npm
+frontend/dist/
+frontend/.env.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Docker
+.docker/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Uploads (user data)
+backend/uploads/

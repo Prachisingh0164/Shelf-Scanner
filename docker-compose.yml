@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  # ── Frontend ────────────────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../docker/Dockerfile.frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    networks:
+      - shelfscanner
+
+  # ── Backend ─────────────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/shelfscanner
+      - DEBUG=True
+      - ALLOWED_ORIGINS=http://localhost:3000
+    volumes:
+      - ./backend/uploads:/app/uploads
+    networks:
+      - shelfscanner
+
+  # ── MongoDB ─────────────────────────────────────────────────────────────────
+  mongodb:
+    image: mongo:7.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - shelfscanner
+
+networks:
+  shelfscanner:
+    driver: bridge
+
+volumes:
+  mongo_data:
