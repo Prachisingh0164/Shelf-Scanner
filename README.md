@@ -340,5 +340,5 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 ---
 
 <div align="center">
-Made with ❤️ by ShelfScanner Team
+Made with ❤️ by Prachi Singh
 </div>
