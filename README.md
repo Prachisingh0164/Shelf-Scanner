@@ -11,8 +11,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **Scan your bookshelf → AI detects books → Get personalized recommendations**
+<img width="793" height="506" alt="Screenshot 2026-05-20 121522" src="https://github.com/user-attachments/assets/90dc0a52-86d9-4498-805b-355cfc5e0800" />
 
-[Demo](#demo) • [Features](#features) • [Installation](#installation) • [API Docs](#api-docs) • [Architecture](#architecture) • [Contributing](#contributing)
 
 </div>
 
